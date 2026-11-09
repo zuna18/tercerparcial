@@ -1,0 +1,223 @@
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+:root {
+  --azul: #0b3d66;
+  --rojo: #d0021b;
+  --texto: #1a1a1a;
+  --gris-texto: #5a6b7b;
+  --gris-borde: #e2e6ea;
+  --footer: #3a4046;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--texto);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* =========================================================
+   BARRA DE NAVEGACIÓN
+   ========================================================= */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 28px;
+  border-bottom: 1px solid var(--gris-borde);
+  box-shadow: 0 1px 6px rgba(0,0,0,.05);
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 50;
+}
+.topnav__left { display: flex; align-items: center; gap: 35px; }
+.topnav__logo { height: 38px; width: auto; }
+.topnav__menu { display: flex; gap: 28px; }
+.topnav__menu a {
+  text-decoration: none;
+  color: var(--azul);
+  font-weight: 700;
+  font-size: .95rem;
+}
+.topnav__menu a.active { color: var(--rojo); }
+.topnav__menu a:hover { text-decoration: underline; }
+
+.topnav__right { display: flex; align-items: center; gap: 18px; }
+.icon-btn {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 1.15rem;
+  color: #555;
+  cursor: pointer;
+}
+.icon-btn:hover { color: var(--azul); }
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: var(--rojo);
+  color: #fff;
+  font-size: .6rem;
+  font-weight: 700;
+  min-width: 15px;
+  height: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.avatar > .fa-user {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #d8dde2;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.avatar__arrow { font-size: .7rem; color: #777; }
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+.contenido {
+  flex: 1;
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 45px 15px 60px;
+}
+.saludo { font-size: 2rem; font-weight: 800; margin-bottom: 35px; }
+.wave { display: inline-block; }
+.subtitulo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--gris-borde);
+  margin-bottom: 25px;
+}
+
+/* Filtros */
+.filtros { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+.filtro, .filtro__buscar {
+  padding: 9px 15px;
+  border: 1px solid #c7ced4;
+  border-radius: 6px;
+  background: #fff;
+  font: 600 .88rem 'Open Sans', sans-serif;
+  color: var(--gris-texto);
+  cursor: pointer;
+}
+.filtro i { margin-left: 6px; font-size: .75rem; }
+.filtro__buscar { cursor: text; min-width: 230px; font-weight: 400; }
+.filtro:hover { background: #f4f6f8; }
+
+/* =========================================================
+   TARJETAS DE CURSO
+   ========================================================= */
+.cursos { display: flex; flex-direction: column; }
+.curso {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 22px 6px;
+  border-bottom: 1px solid var(--gris-borde);
+  position: relative;
+}
+.curso__img {
+  width: 165px;
+  height: 100px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+/* fondos tipo Moodle (patrones de color) */
+.curso__img--redes {
+  background:
+    repeating-linear-gradient(115deg, rgba(255,255,255,.25) 0 2px, transparent 2px 22px),
+    linear-gradient(135deg, #4bc6c6, #7fd9d1);
+}
+.curso__img--dinamica {
+  background:
+    repeating-linear-gradient(45deg, rgba(255,255,255,.18) 0 10px, transparent 10px 20px),
+    linear-gradient(135deg, #e8b765, #f0cd87);
+}
+.curso__img--seguridad {
+  background:
+    repeating-linear-gradient(60deg, rgba(0,0,0,.06) 0 14px, transparent 14px 28px),
+    linear-gradient(135deg, #edc06a, #f5d98f);
+}
+.curso__info { flex: 1; }
+.curso__titulo {
+  display: inline-block;
+  color: var(--azul);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+.curso__titulo:hover { text-decoration: underline; }
+.curso__info p { color: var(--gris-texto); font-size: .9rem; line-height: 1.5; }
+.curso__info strong { color: #44525f; }
+.curso__menu {
+  background: none;
+  border: none;
+  color: #8a96a2;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.curso__menu:hover { color: var(--azul); }
+
+/* =========================================================
+   PIE
+   ========================================================= */
+.pie {
+  background: var(--footer);
+  color: #cfd4d9;
+  text-align: center;
+  padding: 35px 20px 28px;
+}
+.pie__social { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+.pie__social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #2b3035;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: background .25s;
+}
+.pie__social a:hover { background: var(--rojo); }
+.pie__copy { font-size: .82rem; }
+.pie__red { color: #ff4d4d; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 720px) {
+  .topnav { flex-direction: column; gap: 12px; }
+  .topnav__left { flex-direction: column; gap: 12px; }
+  .saludo { font-size: 1.5rem; }
+  .curso { flex-direction: column; }
+  .curso__img { width: 100%; height: 120px; }
+  .curso__menu { position: absolute; top: 18px; right: 6px; }
+}

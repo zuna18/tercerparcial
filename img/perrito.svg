@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="58" fill="#f4a63f"/>
+  <circle cx="60" cy="60" r="58" fill="none" stroke="#c97b1e" stroke-width="3"/>
+  <!-- orejas -->
+  <ellipse cx="33" cy="44" rx="12" ry="20" fill="#8a5a2b" transform="rotate(-18 33 44)"/>
+  <ellipse cx="87" cy="44" rx="12" ry="20" fill="#8a5a2b" transform="rotate(18 87 44)"/>
+  <!-- cara -->
+  <ellipse cx="60" cy="62" rx="30" ry="28" fill="#f2c17d"/>
+  <!-- hocico -->
+  <ellipse cx="60" cy="78" rx="16" ry="13" fill="#fbe5c4"/>
+  <!-- ojos -->
+  <circle cx="49" cy="58" r="5" fill="#3b2a1a"/>
+  <circle cx="71" cy="58" r="5" fill="#3b2a1a"/>
+  <circle cx="50.5" cy="56.5" r="1.6" fill="#fff"/>
+  <circle cx="72.5" cy="56.5" r="1.6" fill="#fff"/>
+  <!-- nariz -->
+  <ellipse cx="60" cy="72" rx="6" ry="4.5" fill="#3b2a1a"/>
+  <!-- boca -->
+  <path d="M60 76 v6 M60 82 q-7 6 -13 1 M60 82 q7 6 13 1" fill="none" stroke="#3b2a1a" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- lengua -->
+  <path d="M56 86 q4 7 8 0 z" fill="#e8738a"/>
+</svg>

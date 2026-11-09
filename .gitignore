@@ -1,0 +1,9 @@
+node_modules/
+
+usuarios.db
+
+usuarios.txt
+
+
+Thumbs.db
+.DS_Store

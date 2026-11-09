@@ -1,0 +1,12 @@
+{
+  "name": "login-uatf",
+  "version": "1.0.0",
+  "description": "Demo de login con SQLite",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0"
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+  <!-- ===================================================== -->
+  <!-- FONDO (imagen difuminada)                              -->
+  <!-- Para cambiar el fondo, cambia la ruta en css/login.css -->
+  <!-- en la regla  .login-bg::before  ->  background-image    -->
+  <!-- ===================================================== -->
+  <div class="login-bg"></div>
+
+  <!-- ===================================================== -->
+  <!-- TARJETA DE INICIO DE SESIÓN                            -->
+  <!-- ===================================================== -->
+  <main class="login">
+    <div class="login__card">
+
+      <!-- Cabecera: logo -->
+      <div class="login__head">
+        <!-- IMAGEN DEL LOGO -> img/logo-uatf.png -->
+        <img src="img/logo-uatf.png" alt="Universidad Autónoma Tomás Frías" class="login__logo">
+      </div>
+
+      <!-- Formulario -->
+      <form class="login__form" id="loginForm" novalidate>
+        <div class="field">
+          <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" autocomplete="username">
+        </div>
+        <div class="field">
+          <input type="password" id="clave" name="clave" placeholder="Contraseña" autocomplete="current-password">
+        </div>
+
+        <p class="login__error" id="loginError"></p>
+
+        <button type="submit" class="login__btn">Acceder</button>
+
+        <a href="#" class="login__forgot">¿Olvidó su contraseña?</a>
+      </form>
+
+      <hr class="login__divider">
+
+      <!-- Pie: idioma + cookies -->
+      <div class="login__foot">
+        <div class="lang">
+          <button class="lang__btn" id="langBtn" type="button">
+            Español - Internacional (es)
+            <span class="lang__arrow">▾</span>
+          </button>
+          <ul class="lang__menu" id="langMenu">
+            <li><a href="#">Español - Internacional (es)</a></li>
+            <li><a href="#">English (en)</a></li>
+          </ul>
+        </div>
+        <button class="cookies__btn" type="button">Aviso de Cookies</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/login.js" defer></script>
+</body>
+</html>

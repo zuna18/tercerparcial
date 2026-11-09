@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma Moodle - U.A.T.F.</title>
+
+  <!-- Fuente e iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===================================================== -->
+  <!-- SECCIÓN 1: CABECERA (barra roja)                       -->
+  <!-- ===================================================== -->
+  <header class="header" id="inicio">
+    <div class="container header__inner">
+      <a href="#" class="header__logo">
+        <!-- IMAGEN: logo blanco de la universidad -> img/logo.png -->
+        <img src="img/logo.svg" alt="Logo" data-placeholder="logo.svg">
+      </a>
+
+      <nav class="header__nav">
+        <div class="lang">
+          <button class="lang__btn" id="langBtn">
+            <i class="fa-solid fa-language"></i>
+            Español - Internacional (es)
+            <i class="fa-solid fa-chevron-down lang__arrow"></i>
+          </button>
+          <ul class="lang__menu" id="langMenu">
+            <li><a href="#">Español - Internacional (es)</a></li>
+            <li><a href="#">English (en)</a></li>
+          </ul>
+        </div>
+        <a href="login.html" class="header__login">Acceder</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================================================== -->
+  <!-- SECCIÓN 2: CARRUSEL PRINCIPAL (slider)                 -->
+  <!-- ===================================================== -->
+  <section class="hero">
+    <div class="hero__track" id="heroTrack">
+      <!-- IMÁGENES DEL CARRUSEL: se ponen como FONDO (background-image).
+           Para cambiar una foto, cambia la ruta dentro de url('...') -->
+      <div class="hero__slide active" style="background-image: url('img/hero1.webp');"></div>
+      <div class="hero__slide" style="background-image: url('img/hero2.webp');"></div>
+      <div class="hero__slide" style="background-image: url('img/hero3.webp');"></div>
+      <div class="hero__slide" style="background-image: url('img/hero4.webp');"></div>
+    </div>
+
+    <button class="hero__arrow hero__arrow--prev" id="prevBtn" aria-label="Anterior">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="hero__arrow hero__arrow--next" id="nextBtn" aria-label="Siguiente">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="hero__dots" id="heroDots"></div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- SECCIÓN 3: BANDA AZUL DE PRESENTACIÓN                  -->
+  <!-- ===================================================== -->
+  <section class="intro">
+    <div class="container intro__inner">
+      <div class="intro__text">
+        <h1>Universidad Autónoma Tomás Frías</h1>
+        <p>Reconocida por su excelencia académica, emplea diferentes tecnologías para brindar una
+          experiencia de aprendizaje innovadora y accesible a sus estudiantes.</p>
+      </div>
+      <a href="#" class="btn-outline">PAGINA OFICIAL</a>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- SECCIÓN 4: TARJETAS DOCENTES / ESTUDIANTES             -->
+  <!-- ===================================================== -->
+  <section class="cards">
+    <div class="container cards__grid">
+      <a href="#" class="card">
+        <!-- IMAGEN: tarjeta docentes -> img/docentes.jpg -->
+        <img src="img/docentes.webp" alt="Docentes" data-placeholder="docentes.webp">
+        <div class="card__label">
+          <i class="fa-solid fa-universal-access"></i> DOCENTES
+        </div>
+      </a>
+      <a href="#" class="card">
+        <!-- IMAGEN: tarjeta estudiantes -> img/estudiantes.jpg -->
+        <img src="img/estudiantes.webp" alt="Estudiantes" data-placeholder="estudiantes.webp">
+        <div class="card__label">
+          <i class="fa-solid fa-graduation-cap"></i> ESTUDIANTES
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- SECCIÓN 5: NOVEDADES (6 items con iconos)              -->
+  <!-- ===================================================== -->
+  <section class="news">
+    <div class="container">
+      <h2 class="section-title">NOVEDADES DE LA PLATAFORMA DE MOODLE DE LA U.A.T.F.</h2>
+
+      <div class="news__grid">
+        <div class="news__item">
+          <div class="news__icon"><i class="fa-solid fa-download"></i></div>
+          <div>
+            <h3>Uso de la plataforma</h3>
+            <p>Puedes utilizar la plataforma en la WEB como también en aplicaciones móviles</p>
+          </div>
+        </div>
+        <div class="news__item">
+          <div class="news__icon"><i class="fa-solid fa-gear"></i></div>
+          <div>
+            <h3>Versión de la Plataforma de Moodle</h3>
+            <p>Moodle versión 4.3</p>
+          </div>
+        </div>
+        <div class="news__item">
+          <div class="news__icon"><i class="fa-solid fa-info"></i></div>
+          <div>
+            <h3>¿Cómo Acceder?</h3>
+            <p><strong>Usuario:</strong> (R.U.)<br><strong>Contraseña:</strong> (Clave de Matrícula)</p>
+          </div>
+        </div>
+        <div class="news__item">
+          <div class="news__icon"><i class="fa-regular fa-clock"></i></div>
+          <div>
+            <h3>Tiempo de uso</h3>
+            <p>Plataforma abierta 24/7</p>
+          </div>
+        </div>
+        <div class="news__item">
+          <div class="news__icon"><i class="fa-solid fa-check"></i></div>
+          <div>
+            <h3>Consejos</h3>
+            <p>No compartas tu Registro Universitario, ni tu Contraseña con nadie</p>
+          </div>
+        </div>
+        <div class="news__item">
+          <div class="news__icon"><i class="fa-solid fa-universal-access"></i></div>
+          <div>
+            <h3>Frase del día</h3>
+            <p id="fraseDia">La educación es el pasaporte hacia el futuro, el mañana pertenece a aquellos que se preparan hoy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- SECCIÓN 6: ¿QUIÉNES SOMOS? (fondo azul)                -->
+  <!-- ===================================================== -->
+  <section class="about">
+    <div class="container about__inner">
+      <div class="about__text">
+        <h2 class="section-title section-title--light">¿QUIÉNES SOMOS?</h2>
+        <h3>SOMOS UNIVERSIDAD AUTÓNOMA TOMÁS FRÍAS.</h3>
+        <p>Una Universidad comprometida con la excelencia académica y la innovación. Guiados por la pasión
+          por el conocimiento y el deseo de preparar a nuestros estudiantes para los desafíos del mundo
+          actual, ofrecemos programas educativos avanzados y fomentamos un ambiente de aprendizaje colaborativo.</p>
+        <a href="#" class="btn-outline">VER SITIO OFICIAL</a>
+      </div>
+      <div class="about__img">
+        <!-- IMAGEN: persona sin fondo (PNG transparente) -> img/quienes-somos.png -->
+        <img src="img/quienes-somos.png" alt="Estudiante" data-placeholder="quienes-somos.png">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- SECCIÓN 7: LOGOS INSTITUCIONALES                       -->
+  <!-- ===================================================== -->
+  <section class="logos">
+    <div class="container">
+      <h2 class="section-title">UNIVERSIDAD AUTÓNOMA TOMÁS FRÍAS</h2>
+      <p class="logos__subtitle">EXCELENCIA ACADÉMICA AL SERVICIO DEL PUEBLO</p>
+      <div class="logos__row">
+        <!-- IMÁGENES: logos -> img/logo-1.png ... img/logo-6.png -->
+        <img src="img/logo-1.png" alt="Logo 1" data-placeholder="logo-1.png">
+        <img src="img/logo-2.png" alt="Logo 2" data-placeholder="logo-2.png">
+        <img src="img/logo-3.jpg" alt="Logo 3" data-placeholder="logo-3.jpg">
+        <img src="img/logo-4.svg" alt="Logo 4" data-placeholder="logo-4.svg">
+        <img src="img/logo-5.svg" alt="Logo 5" data-placeholder="logo-5.svg">
+        <img src="img/logo-6.svg" alt="Logo 6" data-placeholder="logo-6.svg">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- SECCIÓN 8: PIE DE PÁGINA (footer oscuro)               -->
+  <!-- ===================================================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <!-- IMAGEN: logo para el footer -> img/logo-footer.png -->
+        <img src="img/logo.svg" alt="Logo" class="footer__logo" data-placeholder="logo.svg">
+        <p class="footer__quote">Convierte cada desafío en una oportunidad y cada fracaso en un aprendizaje.</p>
+      </div>
+      <div class="footer__col">
+        <h4>CONTACTO</h4>
+        <a href="#">Vicerrectorado</a>
+      </div>
+      <div class="footer__col">
+        <h4>SITIOS</h4>
+        <a href="#">Universidad Autónoma Tomás Frías</a>
+        <a href="#">Estudiantes</a>
+        <a href="#">Docentes</a>
+        <a href="#">Directores de carrera</a>
+      </div>
+      <div class="footer__col">
+        <h4>¿NECESITAS AYUDA?</h4>
+        <p>Puedes aproximarte a DataCenter Académico ubicado en Vicerrectorado (Ciudadela Universitaria)</p>
+      </div>
+    </div>
+
+    <div class="footer__social">
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="Enlace"><i class="fa-solid fa-link"></i></a>
+    </div>
+
+    <p class="footer__copy">
+      Derechos de Autor © <span id="year"></span> -
+      <span class="footer__red">Universidad Autónoma Tomás Frías</span> -
+      <strong>Vicerrectorado</strong> - <strong>Data Center Académico</strong>.
+    </p>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE: volver arriba -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Script -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>

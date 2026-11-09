@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis cursos | U.A.T.F.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/cursos.css">
+</head>
+<body>
+
+  <!-- ===================================================== -->
+  <!-- BARRA DE NAVEGACIÓN (blanca, arriba)                   -->
+  <!-- ===================================================== -->
+  <header class="topnav">
+    <div class="topnav__left">
+      <!-- IMAGEN LOGO -> img/logo-uatf.png -->
+      <img src="img/logo-uatf.png" alt="U.A.T.F." class="topnav__logo">
+      <nav class="topnav__menu">
+        <a href="index.html">Página Principal</a>
+        <a href="#">Área personal</a>
+        <a href="cursos.html" class="active">Mis cursos</a>
+      </nav>
+    </div>
+    <div class="topnav__right">
+      <button class="icon-btn" aria-label="Notificaciones">
+        <i class="fa-solid fa-bell"></i>
+        <span class="badge">1</span>
+      </button>
+      <button class="icon-btn" aria-label="Mensajes"><i class="fa-solid fa-comment"></i></button>
+      <div class="avatar">
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-chevron-down avatar__arrow"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================== -->
+  <!-- CONTENIDO                                              -->
+  <!-- ===================================================== -->
+  <main class="contenido">
+    <!-- Saludo: cambia el nombre aquí -->
+    <h1 class="saludo">¡Hola, JASEL! <span class="wave">👋</span></h1>
+
+    <h2 class="subtitulo">Vista general de curso</h2>
+
+    <!-- Barra de filtros (decorativa) -->
+    <div class="filtros">
+      <button class="filtro">Todos <i class="fa-solid fa-chevron-down"></i></button>
+      <input type="text" class="filtro__buscar" placeholder="Buscar">
+      <button class="filtro">Ordenar por nombre del curso <i class="fa-solid fa-chevron-down"></i></button>
+      <button class="filtro">Resumen <i class="fa-solid fa-chevron-down"></i></button>
+    </div>
+
+    <!-- ===== TARJETAS DE CURSOS ===== -->
+    <div class="cursos">
+
+      <article class="curso">
+        <div class="curso__img curso__img--redes"></div>
+        <div class="curso__info">
+          <a href="#" class="curso__titulo">SIS625-TALLER DE REDES-G1_2/2026</a>
+          <p>Carrera Ingeniería de Sistemas</p>
+          <p><strong>SIGLA:</strong> SIS625</p>
+          <p><strong>MATERIA:</strong> TALLER DE REDES</p>
+          <p><strong>GESTION:</strong> 2026 - <strong>PERIODO:</strong> 2 - <strong>GRUPO:</strong> 1</p>
+        </div>
+        <button class="curso__menu" aria-label="Opciones"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+      </article>
+
+      <article class="curso">
+        <div class="curso__img curso__img--dinamica"></div>
+        <div class="curso__info">
+          <a href="#" class="curso__titulo">SIS710-DINAMICA DE SISTEMAS-G1_2/2026</a>
+          <p>Carrera Ingeniería de Sistemas</p>
+          <p><strong>SIGLA:</strong> SIS710</p>
+          <p><strong>MATERIA:</strong> DINAMICA DE SISTEMAS</p>
+          <p><strong>GESTION:</strong> 2026 - <strong>PERIODO:</strong> 2 - <strong>GRUPO:</strong> 1</p>
+        </div>
+        <button class="curso__menu" aria-label="Opciones"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+      </article>
+
+      <article class="curso">
+        <div class="curso__img curso__img--seguridad"></div>
+        <div class="curso__info">
+          <a href="#" class="curso__titulo">SIS737-SEGURIDAD DE SISTEMAS-G1_2/2026</a>
+          <p>Carrera Ingeniería de Sistemas</p>
+          <p><strong>SIGLA:</strong> SIS737</p>
+          <p><strong>MATERIA:</strong> SEGURIDAD DE SISTEMAS</p>
+          <p><strong>GESTION:</strong> 2026 - <strong>PERIODO:</strong> 2 - <strong>GRUPO:</strong> 1</p>
+        </div>
+        <button class="curso__menu" aria-label="Opciones"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- ===================================================== -->
+  <!-- PIE DE PÁGINA                                          -->
+  <!-- ===================================================== -->
+  <footer class="pie">
+    <div class="pie__social">
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="Enlace"><i class="fa-solid fa-link"></i></a>
+    </div>
+    <p class="pie__copy">
+      Derechos de Autor © <span id="year"></span> -
+      <span class="pie__red">Universidad Autónoma Tomás Frías</span> -
+      <strong>Vicerrectorado</strong> - <strong>Data Center Académico</strong>.
+    </p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
