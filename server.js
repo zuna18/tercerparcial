@@ -10,7 +10,8 @@ const fs = require('fs');
 const path = require('path');
 const Database = require('better-sqlite3');
 
-const PUERTO = 5500;
+const PUERTO = Number(process.env.PORT) || 5500;
+//const PUERTO = 5500;
 const RAIZ = __dirname;
 
 // ---- 1. Abrir (o crear) la base de datos ----
@@ -82,7 +83,7 @@ const servidor = http.createServer((req, res) => {
   });
 });
 
-servidor.listen(PUERTO, () => {
+servidor.listen(PUERTO, '0.0.0.0', () => {
   console.log('Servidor corriendo en  http://localhost:' + PUERTO);
   console.log('Base de datos: usuarios.db');
   console.log('Ver usuarios guardados:  http://localhost:' + PUERTO + '/usuarios');
